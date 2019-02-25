@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AssetCatalogImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Yb-Jm-rzw">
+                                <rect key="frame" x="30" y="186" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Yb-Jm-rzw" secondAttribute="height" multiplier="1:1" id="U7u-Vp-coB"/>
+                                </constraints>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uqC-Sa-XPZ">
+                                <rect key="frame" x="30" y="531" width="315" height="29"/>
+                                <segments>
+                                    <segment title="Image Literal"/>
+                                    <segment title="Manual"/>
+                                    <segment title="Enum"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HLY-ET-M3i"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uqC-Sa-XPZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8MO-Wh-9Wv"/>
+                            <constraint firstItem="uqC-Sa-XPZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-30" id="Hri-mN-6X9"/>
+                            <constraint firstItem="5Yb-Jm-rzw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-60" id="JoF-OV-ajh"/>
+                            <constraint firstItem="5Yb-Jm-rzw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="NjP-Wr-HnP"/>
+                            <constraint firstItem="uqC-Sa-XPZ" firstAttribute="top" secondItem="5Yb-Jm-rzw" secondAttribute="bottom" constant="30" id="WjN-IO-DeJ"/>
+                            <constraint firstItem="5Yb-Jm-rzw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z4V-yb-1qs"/>
+                            <constraint firstItem="uqC-Sa-XPZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kWf-fr-9Tf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="5Yb-Jm-rzw" id="n3a-4u-nbr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
