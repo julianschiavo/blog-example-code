@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPP-A0-5GF">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScanningDocuments" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="shd-1y-G6N">
+                                <rect key="frame" x="16" y="168" width="343" height="364"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-Yv-5Xw" customClass="BoundingBoxImageView" customModule="ScanningDocuments" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="204"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xv7-Bx-Vqa">
+                                        <rect key="frame" x="0.0" y="214" width="343" height="150"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Cbz-8V-1OV"/>
+                                            <constraint firstAttribute="height" priority="250" constant="150" id="sEW-Ev-QGp"/>
+                                        </constraints>
+                                        <string key="text">Tap Scan to scan a document, which will be perspective corrected and enhanced. The output of performing text recognition on the document will be shown here.</string>
+                                        <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES" shipmentTrackingNumber="YES" flightNumber="YES" lookupSuggestion="YES"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-vU-gFJ">
+                                <rect key="frame" x="16" y="562" width="343" height="55"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0C2-oe-XBf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-Ib-JHi">
+                                <rect key="frame" x="16" y="552" width="343" height="2"/>
+                                <color key="tintColor" cocoaTouchSystemColor="systemOrangeColor"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e6X-vU-gFJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="0zH-ZC-6E3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSe-Ib-JHi" secondAttribute="trailing" constant="16" id="2pq-JF-XHq"/>
+                            <constraint firstItem="e6X-vU-gFJ" firstAttribute="top" secondItem="eSe-Ib-JHi" secondAttribute="bottom" constant="8" id="8um-Xh-FiI"/>
+                            <constraint firstItem="e6X-vU-gFJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="WCK-Bw-6yt"/>
+                            <constraint firstItem="e6X-vU-gFJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-50" id="Y8x-9X-lov"/>
+                            <constraint firstItem="shd-1y-G6N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="20" id="Z1Y-i3-cff"/>
+                            <constraint firstItem="eSe-Ib-JHi" firstAttribute="top" secondItem="shd-1y-G6N" secondAttribute="bottom" constant="20" id="deL-UF-E2R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="shd-1y-G6N" secondAttribute="trailing" constant="16" id="mmZ-t9-Tqq"/>
+                            <constraint firstItem="eSe-Ib-JHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rXH-nz-iv9"/>
+                            <constraint firstItem="shd-1y-G6N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vtX-E4-p32"/>
+                            <constraint firstItem="shd-1y-G6N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="yCd-1V-EzY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scanner" largeTitleDisplayMode="always" id="FmM-o6-PCP"/>
+                    <connections>
+                        <outlet property="imageView" destination="gNp-Yv-5Xw" id="N26-Bg-QOl"/>
+                        <outlet property="progressIndicator" destination="eSe-Ib-JHi" id="f8t-zW-UJa"/>
+                        <outlet property="scanButton" destination="e6X-vU-gFJ" id="hak-4y-gES"/>
+                        <outlet property="textView" destination="xv7-Bx-Vqa" id="FF9-0a-so6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2eq-Nc-whR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iPP-A0-5GF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Luc-k7-Jjs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6tZ-pe-geZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8Q-32-Qqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="134"/>
+        </scene>
+    </scenes>
+</document>
