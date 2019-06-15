@@ -7,3 +7,4 @@ This is the example code that accompanies articles on my [blog](https://schiavo.
 2. [Implementing dark mode in your app using observers](2019-02-10-DarkMode) ([Article](https://schiavo.me/2019/implementing-dark-mode/))
 3. [Different ways of loading images from Asset Catalogs](2019-02-17-AssetCatalogImages) ([Article](https://schiavo.me/2019/asset-catalog-images/))
 4. [Scanning documents and other papers with WeScan](2019-02-24-ScanningDocuments) ([Article](https://schiavo.me/2019/scanning-documents/))
+5. [Building DoublePong, my WWDC18 Scholarship Submission](2019-03-10-BuildingDoublePong) ([Article](https://schiavo.me/2019/building-doublepong/))
