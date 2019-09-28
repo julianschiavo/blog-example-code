@@ -21,6 +21,8 @@ class ViewController: UIViewController, ASAuthorizationControllerDelegate, ASAut
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        view.backgroundColor = .gray
+        
         setupButton()
         setupLabels()
     }
@@ -58,7 +60,7 @@ class ViewController: UIViewController, ASAuthorizationControllerDelegate, ASAut
     
     /// Set up the ASAuthorizationAppleIDButton button which should be used to let the user know they will Sign in with Apple
     private func setupButton() {
-        signInWithAppleButton = ASAuthorizationAppleIDButton(type: .signUp, style: traitCollection.userInterfaceStyle == .dark ? .whiteOutline : .black)
+        signInWithAppleButton = ASAuthorizationAppleIDButton(type: .signIn, style: traitCollection.userInterfaceStyle == .dark ? .whiteOutline : .black)
         signInWithAppleButton.cornerRadius = 10
         signInWithAppleButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         signInWithAppleButton.translatesAutoresizingMaskIntoConstraints = false
