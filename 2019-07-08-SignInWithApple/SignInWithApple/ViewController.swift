@@ -21,8 +21,6 @@ class ViewController: UIViewController, ASAuthorizationControllerDelegate, ASAut
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view.backgroundColor = .gray
-        
         setupButton()
         setupLabels()
     }
